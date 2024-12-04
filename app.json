@@ -1,28 +1,56 @@
 {
   "expo": {
+    "projectId": "live-e5194",
     "name": "live",
     "slug": "live",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
+      "backgroundColor": "#ffffff",
+      "newArchEnabled": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.arbazmalik.live"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./assets/notification-sound.wav"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7117ac4b-caee-4577-9cb4-585110b72b72"
+      }
+    }
+  },
+  "android": {
+    "googleServicesFile": "./google-services.json",
+    "useNextNotificationsApi": true
+  },
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.yourapp.bundleid",
+    "config": {
+      "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY"
     }
   }
 }
